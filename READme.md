@@ -318,3 +318,4 @@ $$\text{Win Rate} = \frac{W + \frac{T}{2}}{N} \times 100\%$$
 | `POST` | `/api/seed` | Наполнить базу данных пачкой симулированных раздач. | `{"count": 50}` |
 
 ---
+<img width="2939" height="1616" alt="image" src="https://github.com/user-attachments/assets/1863d3c9-92d0-4d4c-b3b1-7b7ceea6fd4f" />
