@@ -1,0 +1,6 @@
+{
+  "name": "Poker Server & Card Vision",
+  "description": "Клиент-сервер для покера со сбором данных процента побед, дашбордом Streamlit и распознаванием карт через камеру.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

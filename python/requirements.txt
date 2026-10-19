@@ -1,0 +1,8 @@
+# Зависимости для покерного сервера, Streamlit дашборда и детектора карт
+streamlit>=1.30.0
+opencv-python>=4.8.0
+pandas>=2.0.0
+plotly>=5.18.0
+numpy>=1.24.0
+requests>=2.31.0
+matplotlib>=3.7.0
