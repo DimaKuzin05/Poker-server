@@ -14,7 +14,6 @@ import {
   SUIT_SYMBOLS,
 } from './utils/pokerEngine';
 
-
 type TabName = 'table' | 'streamlit' | 'vision' | 'code';
 let currentTab: TabName = 'table';
 
@@ -57,7 +56,6 @@ let calcOpponents = 2;
 let calcSimulations = 1000;
 let selectedMatrixHand: StartingHandStat | null = null;
 
-// Активный файл в Python Code Viewer
 let activePythonFile = 'poker_server';
 
 // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ОТРИСОВКИ
@@ -101,7 +99,6 @@ function renderCardHtml(card: Card | null, isHidden = false, highlight = false):
 }
 
 // ЛОГИКА (TEXAS HOLD'EM)
-
 
 function startNewHand(customHeroCards?: Card[]) {
   deck = shuffleDeck(createDeck());
