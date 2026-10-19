@@ -60,9 +60,7 @@ let selectedMatrixHand: StartingHandStat | null = null;
 // Активный файл в Python Code Viewer
 let activePythonFile = 'poker_server';
 
-// ==========================================
 // ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ОТРИСОВКИ
-// ==========================================
 
 function getSuitColor(suit: string): string {
   if (suit === 'h' || suit === '♥') return 'text-rose-600';
@@ -102,9 +100,8 @@ function renderCardHtml(card: Card | null, isHidden = false, highlight = false):
     </div>`;
 }
 
-// ==========================================
-// ЛОГИКА ПОКЕРНОЙ ИГРЫ (TEXAS HOLD'EM)
-// ==========================================
+// ЛОГИКА (TEXAS HOLD'EM)
+
 
 function startNewHand(customHeroCards?: Card[]) {
   deck = shuffleDeck(createDeck());
@@ -334,9 +331,7 @@ function generateBatchHands(count = 50) {
   renderApp();
 }
 
-// ==========================================
 // КОМПЬЮТЕРНОЕ ЗРЕНИЕ (OPENCV / WEBCAM)
-// ==========================================
 
 async function toggleWebcam() {
   const videoEl = document.getElementById('webcam-video') as HTMLVideoElement | null;
@@ -561,9 +556,7 @@ function renderApp() {
   attachEventHandlers();
 }
 
-// ==========================================
 // ВКЛАДКА 1: ПОКЕРНЫЙ СТОЛ
-// ==========================================
 
 function renderTableTab(): string {
   const hero = players[0];
@@ -683,9 +676,7 @@ function renderTableTab(): string {
   `;
 }
 
-// ==========================================
 // ВКЛАДКА 2: АНАЛИТИКА STREAMLIT
-// ==========================================
 
 function renderStreamlitTab(): string {
   const totalHands = handHistory.length;
@@ -945,9 +936,7 @@ function renderStreamlitTab(): string {
   `;
 }
 
-// ==========================================
 // ВКЛАДКА 3: OPENCV CARD VISION
-// ==========================================
 
 function renderVisionTab(): string {
   const visionEquity = detectedCards.length >= 2
@@ -1066,9 +1055,7 @@ function renderVisionTab(): string {
   `;
 }
 
-// ==========================================
-// ВКЛАДКА 4: PYTHON КОД & ИНСТРУКЦИЯ
-// ==========================================
+// ВКЛАДКА 4: PYTHON КОД  ИНСТРУКЦИЯ
 
 const pythonFilesData: Record<string, { name: string; desc: string; code: string }> = {
   poker_server: {
@@ -1267,9 +1254,7 @@ function renderCodeTab(): string {
   `;
 }
 
-// ==========================================
 // НАВЕШИВАНИЕ ОБРАБОТЧИКОВ СОБЫТИЙ (DOM)
-// ==========================================
 
 function attachEventHandlers() {
   // Переключение вкладок
@@ -1360,9 +1345,7 @@ function attachEventHandlers() {
   });
 }
 
-// ==========================================
 // СТАРТ ПРИЛОЖЕНИЯ
-// ==========================================
 
 // Запускаем первую раздачу при загрузке
 startNewHand();
